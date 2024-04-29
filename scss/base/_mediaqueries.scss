@@ -1,0 +1,324 @@
+
+
+/*----------MEDIA QUERYS-------------*/
+@media screen and (max-width: 1020px){
+
+/*-- mediaque MAIN CONTACTENOS --*/ 
+    .dondeencontrarnos div p{
+        font-size: 13px;
+    }
+
+    .dondeencontrarnos div {
+        h3{
+        font-size: 25px;}
+        img{
+            width: 200px;
+            height: 150px;
+        }
+    }
+
+    .dondeencontrarnos iframe{
+        width: 200px;
+        height: 150px;
+    }
+
+    .dondeencontrarnosespaña div p{
+        font-size: 13px;
+    }
+
+    .dondeencontrarnosespaña div {
+        h3{
+        font-size: 25px;}
+        img{
+            width: 200px;
+            height: 150px;
+        }
+    }
+
+    .dondeencontrarnosespaña iframe{
+        width: 200px;
+        height: 150px;
+    }
+}
+
+
+@media screen and (max-width: 960px){
+/*-- mediaque MAIN SERVICIOS --*/
+   .nuestros-servicios section .carru{
+        width: 800px;
+        height: auto;
+    }
+
+    .galeria {
+        h2{
+        font-size: 35px;}        
+    }
+
+    .galeria div{
+        p{
+            font-size: 25px;
+        }
+        img{
+            width: 350px;
+            height: 200px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 840px){
+    main .info .contenedores h1{
+        font-size: 60px;
+    }
+
+
+/*-- mediaque MAIN QUIENES SOMOS --*/
+    .quienessomos .la-empresa  h2{
+        font-size: 50px;
+    }
+    .quienessomos .descripcion-la-empresa p{
+        font-size: 20px;
+    }
+
+/*-- mediaque MAIN CONTACTENOS --*/ 
+    .contacto .formulario-de-contacto{
+        flex-direction: column;
+        margin: 5px; 
+        padding: 5px; 
+    }    
+
+/*-- mediaque MAIN SERVICIOS --*/
+    .nuestros-servicios section .carru{
+        width: 680px;
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    
+/*-- mediaque MAIN INDEX --*/
+    
+    main .info .contenedores p{
+        font-size: 30px;
+    }
+    
+    main .info{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: 500px 200px;
+        grid-area: calc(100vh - 118px);
+    }
+    main .info .contenedores{
+        grid-column: 1/7;
+    }
+    
+    main .novedades{
+        grid-column:1/7;   
+    }
+    
+    main .novedades img{
+        display: none;
+    }
+    main .novedades div div a{
+        margin: 5px;
+        padding: 2px;
+    }   
+
+
+/*-- mediaque MAIN CONTACTENOS --*/ 
+    .dondeencontrarnos div {
+    h3{
+    font-size: 15px;}
+    }
+
+    .dondeencontrarnosespaña div {
+        h3{
+        font-size: 15px;}
+        }    
+
+
+/*-- mediaque MAIN SERVICIOS --*/
+    .servicios H3{
+        font-size: 40PX;
+    }
+    .nuestros-servicios section .carru{
+        width: 580px;
+        height: auto;
+    }
+
+    .nuestros-servicios section h2{
+        font-size: 30px;
+    }
+
+    .galeria {
+        h2{
+        font-size: 25px;}        
+    }
+
+    .galeria div{
+        p{
+            font-size: 15px;
+        }
+        img{
+            width: 250px;
+            height: 120px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 670px){
+
+/*-- mediaque MAIN QUIENES SOMOS --*/
+    .quienessomos .descripcion-la-empresa {
+        flex-direction: column;
+        p{
+            font-size: 15px;
+        }
+    }
+    
+    .quienessomos div h2{
+        font-size: 20px;
+    }
+
+    .quienessomos .nuestros-principios h2{
+        font-size: 20px;        
+    }
+
+    .quienessomos .nuestros-principios .principios {
+        flex-direction: column;
+    }
+
+    .quienessomos .nuestros-principios .principios div{
+        width: 100%;
+    }
+}   
+
+
+@media screen and (max-width: 640px){
+/*-- mediaque MAIN CONTACTENOS --*/
+    .dondeencontrarnos {
+        flex-direction: column;
+        height: auto;
+        margin: 10px;
+        div img{
+            display: none;
+        }
+    }
+
+    .dondeencontrarnosespaña {
+        flex-direction: column;
+        height: auto;
+        margin: 10px;
+        div img{
+            display: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+        
+    .barra-arriba{
+        font-size: 12px;
+        height: 20px;
+    }
+    
+    main .servicios .tarjetas div{
+        width: 150px;
+        height: 200px;
+    }
+    
+    footer iframe{
+        width: 120px;
+        height: 120px;
+    }
+
+/*-- mediaque MAIN SERVICIOS --*/
+    .nuestros-servicios section .carru{
+        display: none;
+    }
+
+    .galeria div{
+        @include flexparagaleria(flex, column, space-evenly,center,15px);
+        
+    }
+
+}
+
+
+
+  
+
+@media screen and (max-width: 530px){
+    
+    
+    
+    .logo-wsp-fixed {
+        display: none;
+    }
+    
+    footer iframe{
+        display: none;
+    }
+    
+    .direccion-footer{
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (max-width: 440px){
+/*-- mediaque MAIN CONTACTENOS --*/
+    .contacto .formulario-de-contacto div{
+        width: 300px;
+        height: auto;
+        textarea {
+            width: 250px;
+            height: 125px;
+        }
+    }
+    .contacto .formulario-de-contacto section{
+        display: none;
+    }
+}
+    
+
+@media screen and (max-width: 400px){
+    
+    .contenedores p{
+        display: none;
+    }
+    .contenedores{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .barra-arriba{
+        font-size: 10px;
+    }
+    
+    header a img {
+        width: 120px;
+        height: 80%;    
+    } 
+    
+    
+    .redes-footer
+        {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: end;
+    } 
+    .redes-footer a img{
+        padding: 5px;
+        width: 40px;
+        height: 80%;
+        transition: 0,5s;
+        object-fit: cover;
+    }
+    }
+    
+    

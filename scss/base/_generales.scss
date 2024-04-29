@@ -4,3 +4,131 @@
     padding: 0%;
     box-sizing: border-box;
 }   
+.logo-wsp-fixed img{
+        width: 50px;
+        position: fixed;
+        bottom: 30px;   
+        right: 30px;
+}
+
+
+
+/*---- VATIABLES ----*/
+$color-principal: rgb(199, 202, 202);
+$color-secundario: rgba(68, 77, 77, 0.864);
+$color-terciario: rgb(76, 76, 179);
+
+/*---- MIXING ----*/
+
+@mixin flexparagaleria($flex, $direction, $justify, $align, $margin){
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    margin: $margin;
+}
+
+
+
+
+
+/*---- HEADER IGUAL EN TODAS LA PAGINAS ----*/
+.barra-arriba{
+    background-color: rgb(76, 76, 179)  ;
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+    height: 25px;
+    p {
+        display: flex;
+        text-align: center;
+        color: white;
+    }
+    a{  
+        display: flex;
+        text-align:center;
+        text-decoration: none;
+         color: white;
+    }
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(107,120,120);
+    background: linear-gradient(257deg, rgba(107,120,120,1) 43%, rgba(60,70,70,1) 76%);
+    top: 0;
+    padding: 5px;
+    height: auto;
+    width: 100%;
+    z-index: 1;
+    a{
+        img{
+            width: 140px;
+            height: 140px;  
+        }
+    }
+    .nav-link{
+        color: white;
+        font-size: 20px;
+    }   
+    .navbar-nav .nav-link.active{
+        color: white;
+        font-size: 20px;
+    }   
+    .navbar-nav .nav-link.active:hover{
+        color: black;
+    }   
+    .navbar-brand {
+        color: white;
+        font-size: 20px;
+    }
+}
+
+
+
+/*---- FOOTER IGUAL EN TODAS LA PAGINAS ----*/
+footer{
+    display: flex;
+    background: rgb(107,120,120);
+    background: linear-gradient(257deg, rgba(107,120,120,1) 43%, rgba(60,70,70,1) 76%);
+    width: 100%;
+    height: 200px;
+    padding: 10px; 
+    iframe{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 180px;
+        height: 180px;
+    }
+    .direcion-footer{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px 0px 0px 10px;
+        strong{
+            width: 100%;
+            text-align: start;
+        }
+    }
+    .redes-footer{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: end;
+        a img{
+            padding: 8px;
+            width: 60px;
+            height: 100%;
+            transition: 0,5s;
+            object-fit: cover;
+            &hover{transform: scale(1,2)}
+        }
+    }
+
+}
+
+    

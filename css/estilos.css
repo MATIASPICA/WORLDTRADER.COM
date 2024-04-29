@@ -1,8 +1,97 @@
+@charset "UTF-8";
 /*----  RESET ------ */
 * {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box; }
+
+.logo-wsp-fixed img {
+  width: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px; }
+
+/*---- VATIABLES ----*/
+/*---- MIXING ----*/
+/*---- HEADER IGUAL EN TODAS LA PAGINAS ----*/
+.barra-arriba {
+  background-color: #4c4cb3;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 25px; }
+  .barra-arriba p {
+    display: flex;
+    text-align: center;
+    color: white; }
+  .barra-arriba a {
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    color: white; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #6b7878;
+  background: linear-gradient(257deg, #6b7878 43%, #3c4646 76%);
+  top: 0;
+  padding: 5px;
+  height: auto;
+  width: 100%;
+  z-index: 1; }
+  header a img {
+    width: 140px;
+    height: 140px; }
+  header .nav-link {
+    color: white;
+    font-size: 20px; }
+  header .navbar-nav .nav-link.active {
+    color: white;
+    font-size: 20px; }
+  header .navbar-nav .nav-link.active:hover {
+    color: black; }
+  header .navbar-brand {
+    color: white;
+    font-size: 20px; }
+
+/*---- FOOTER IGUAL EN TODAS LA PAGINAS ----*/
+footer {
+  display: flex;
+  background: #6b7878;
+  background: linear-gradient(257deg, #6b7878 43%, #3c4646 76%);
+  width: 100%;
+  height: 200px;
+  padding: 10px; }
+  footer iframe {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 180px;
+    height: 180px; }
+  footer .direcion-footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 0px 0px 10px; }
+    footer .direcion-footer strong {
+      width: 100%;
+      text-align: start; }
+  footer .redes-footer {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: end; }
+    footer .redes-footer a img {
+      padding: 8px;
+      width: 60px;
+      height: 100%;
+      transition: 0,5s;
+      object-fit: cover; }
+      footer .redes-footer a imghover {
+        transform: scale(1, 2); }
 
 .barra-arriba {
   background-color: #4c4cb3;
@@ -24,8 +113,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(68, 77, 77, 0.864);
-  position: sticky;
+  background: #6b7878;
+  background: linear-gradient(257deg, #6b7878 43%, #3c4646 76%);
   top: 0;
   padding: 5px;
   height: auto;
@@ -47,7 +136,7 @@ header {
     font-size: 20px; }
 
 main {
-  background-color: #f2f4f4;
+  background-color: #c7caca;
   display: flex;
   flex-direction: column;
   /*--- SERVICIOS CARRUSEL -----*/ }
@@ -81,7 +170,7 @@ main {
   main .novedades {
     grid-column-start: 6;
     grid-column-end: 7;
-    background-color: #f2f4f4;
+    background-color: #c7caca;
     border: gray solid;
     padding: 0px 0px 2px 2px;
     text-align: center; }
@@ -101,9 +190,11 @@ main {
       margin: 20px;
       font-size: 10PX;
       display: flex;
-      flex-direction: column; }
-      main .novedades div div ahover {
-        background-color: #444d4d;
+      flex-direction: column;
+      transition-property: background-color;
+      transition-duration: 1s; }
+      main .novedades div div a:hover {
+        background-color: rgba(68, 77, 77, 0.864);
         color: black; }
   main .servicios {
     width: 100%;
@@ -125,8 +216,7 @@ main {
       align-items: center;
       flex-wrap: wrap; }
       main .servicios .tarjetas div {
-        border: 2px rgba(68, 77, 77, 0.864) solid;
-        border-radius: 5px;
+        background-color: #c7caca;
         margin: 30px;
         text-align: center;
         width: 250px;
@@ -141,8 +231,405 @@ main {
           background-color: black;
           text-decoration: none;
           padding: 5px;
-          color: white; }
+          color: white;
+          transition-duration: 2s; }
+          main .servicios .tarjetas div a:hover {
+            background-color: rgba(68, 77, 77, 0.864);
+            color: black;
+            transform: scale(1.2);
+            border-radius: 5px; }
   main .carrusel-de-servicios {
     width: 100%;
     height: 500px;
     margin: 2px 0 2px 0; }
+
+/*--- MAIN DE QUIENES SOMOS -----*/
+.quienessomos .la-empresa {
+  width: 100%;
+  height: 500px;
+  background-image: url(../images/buqueoceano.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .quienessomos .la-empresa h2 {
+    font-size: 70px;
+    height: 50%;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+.quienessomos .descripcion-la-empresa {
+  background-color: #c7caca;
+  padding: 20px;
+  display: flex;
+  flex-wrap: nowrap; }
+  .quienessomos .descripcion-la-empresa p {
+    font-size: 25px;
+    margin: 30px; }
+
+.quienessomos div h2 {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 40px; }
+
+.quienessomos .nuestros-principios {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  .quienessomos .nuestros-principios h2 {
+    font-size: 30px;
+    text-align: center; }
+  .quienessomos .nuestros-principios .principios {
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 5px;
+    margin: 5px; }
+    .quienessomos .nuestros-principios .principios div {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      width: 33%;
+      align-items: center; }
+      .quienessomos .nuestros-principios .principios div div {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: flex-start; }
+      .quienessomos .nuestros-principios .principios div div img {
+        width: 45px;
+        height: 45px; }
+
+/*--- MAIN DE SERVICIOS -----*/
+.nuestros-servicios {
+  background-color: #c7caca; }
+
+.nuestros-servicios section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px; }
+  .nuestros-servicios section h2 {
+    font-size: 45px; }
+  .nuestros-servicios section .carru {
+    width: 900px;
+    height: 500px; }
+
+.galeria h2 {
+  font-size: 45px;
+  text-align: center;
+  padding: 5px;
+  margin-top: 60px;
+  margin-bottom: 60px; }
+
+.galeria div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 15px; }
+  .galeria div p {
+    text-align: center;
+    font-size: 35px;
+    padding: 100px;
+    transition: 2s; }
+    .galeria div p:hover {
+      transform: scale(1.2); }
+  .galeria div img {
+    width: 450px;
+    height: 300px; }
+
+/*--- MAIN DE CONTACTO -----*/
+.formulario-de-contacto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px; }
+  .formulario-de-contacto div {
+    height: 100%; }
+    .formulario-de-contacto div h3 {
+      text-align: center;
+      font-size: 35px;
+      margin: 10px;
+      padding: 5px; }
+  .formulario-de-contacto form div {
+    margin: 10px; }
+    .formulario-de-contacto form div input {
+      border-radius: 4px; }
+    .formulario-de-contacto form div textarea {
+      width: 400px;
+      height: 200px; }
+  .formulario-de-contacto .cajaparaescribir {
+    display: flex;
+    flex-direction: column; }
+  .formulario-de-contacto section {
+    width: 50%; }
+    .formulario-de-contacto section h3 {
+      font-size: 35px;
+      text-align: center;
+      margin: 10px; }
+    .formulario-de-contacto section p {
+      font-size: 25px;
+      text-align: center; }
+
+.contacto h3 {
+  font-size: 35px;
+  text-align: center;
+  margin: 25px;
+  padding: 5px; }
+
+.dondeencontrarnos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 400px; }
+  .dondeencontrarnos div {
+    width: 33%; }
+    .dondeencontrarnos div h3 {
+      text-align: start; }
+
+.dondeencontrarnosespaña {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 400px; }
+  .dondeencontrarnosespaña div {
+    width: 33%; }
+    .dondeencontrarnosespaña div h3 {
+      text-align: start; }
+    .dondeencontrarnosespaña div img {
+      width: 310px;
+      height: 210px; }
+
+footer {
+  display: flex;
+  background: #3c4646;
+  background: linear-gradient(257deg, #3c4646 43%, #6b7878 78%);
+  width: 100%;
+  height: 200px;
+  padding: 10px; }
+  footer iframe {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 180px;
+    height: 180px; }
+  footer .direcion-footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 0px 0px 10px; }
+    footer .direcion-footer strong {
+      width: 100%;
+      text-align: start; }
+  footer .redes-footer {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: end; }
+    footer .redes-footer a img {
+      padding: 8px;
+      width: 60px;
+      height: 100%;
+      transition: 0,5s;
+      object-fit: cover; }
+      footer .redes-footer a imghover {
+        transform: scale(1, 2); }
+
+/*----------MEDIA QUERYS-------------*/
+@media screen and (max-width: 1020px) {
+  /*-- mediaque MAIN CONTACTENOS --*/
+  .dondeencontrarnos div p {
+    font-size: 13px; }
+  .dondeencontrarnos div h3 {
+    font-size: 25px; }
+  .dondeencontrarnos div img {
+    width: 200px;
+    height: 150px; }
+  .dondeencontrarnos iframe {
+    width: 200px;
+    height: 150px; }
+  .dondeencontrarnosespaña div p {
+    font-size: 13px; }
+  .dondeencontrarnosespaña div h3 {
+    font-size: 25px; }
+  .dondeencontrarnosespaña div img {
+    width: 200px;
+    height: 150px; }
+  .dondeencontrarnosespaña iframe {
+    width: 200px;
+    height: 150px; } }
+
+@media screen and (max-width: 960px) {
+  /*-- mediaque MAIN SERVICIOS --*/
+  .nuestros-servicios section .carru {
+    width: 800px;
+    height: auto; }
+  .galeria h2 {
+    font-size: 35px; }
+  .galeria div p {
+    font-size: 25px; }
+  .galeria div img {
+    width: 350px;
+    height: 200px; } }
+
+@media screen and (max-width: 840px) {
+  main .info .contenedores h1 {
+    font-size: 60px; }
+  /*-- mediaque MAIN QUIENES SOMOS --*/
+  .quienessomos .la-empresa h2 {
+    font-size: 50px; }
+  .quienessomos .descripcion-la-empresa p {
+    font-size: 20px; }
+  /*-- mediaque MAIN CONTACTENOS --*/
+  .contacto .formulario-de-contacto {
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px; }
+  /*-- mediaque MAIN SERVICIOS --*/
+  .nuestros-servicios section .carru {
+    width: 680px;
+    height: auto; } }
+
+@media screen and (max-width: 700px) {
+  /*-- mediaque MAIN INDEX --*/
+  main .info .contenedores p {
+    font-size: 30px; }
+  main .info {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 500px 200px;
+    grid-area: calc(100vh - 118px); }
+  main .info .contenedores {
+    grid-column: 1/7; }
+  main .novedades {
+    grid-column: 1/7; }
+  main .novedades img {
+    display: none; }
+  main .novedades div div a {
+    margin: 5px;
+    padding: 2px; }
+  /*-- mediaque MAIN CONTACTENOS --*/
+  .dondeencontrarnos div h3 {
+    font-size: 15px; }
+  .dondeencontrarnosespaña div h3 {
+    font-size: 15px; }
+  /*-- mediaque MAIN SERVICIOS --*/
+  .servicios H3 {
+    font-size: 40PX; }
+  .nuestros-servicios section .carru {
+    width: 580px;
+    height: auto; }
+  .nuestros-servicios section h2 {
+    font-size: 30px; }
+  .galeria h2 {
+    font-size: 25px; }
+  .galeria div p {
+    font-size: 15px; }
+  .galeria div img {
+    width: 250px;
+    height: 120px; } }
+
+@media screen and (max-width: 670px) {
+  /*-- mediaque MAIN QUIENES SOMOS --*/
+  .quienessomos .descripcion-la-empresa {
+    flex-direction: column; }
+    .quienessomos .descripcion-la-empresa p {
+      font-size: 15px; }
+  .quienessomos div h2 {
+    font-size: 20px; }
+  .quienessomos .nuestros-principios h2 {
+    font-size: 20px; }
+  .quienessomos .nuestros-principios .principios {
+    flex-direction: column; }
+  .quienessomos .nuestros-principios .principios div {
+    width: 100%; } }
+
+@media screen and (max-width: 640px) {
+  /*-- mediaque MAIN CONTACTENOS --*/
+  .dondeencontrarnos {
+    flex-direction: column;
+    height: auto;
+    margin: 10px; }
+    .dondeencontrarnos div img {
+      display: none; }
+  .dondeencontrarnosespaña {
+    flex-direction: column;
+    height: auto;
+    margin: 10px; }
+    .dondeencontrarnosespaña div img {
+      display: none; } }
+
+@media screen and (max-width: 600px) {
+  .barra-arriba {
+    font-size: 12px;
+    height: 20px; }
+  main .servicios .tarjetas div {
+    width: 150px;
+    height: 200px; }
+  footer iframe {
+    width: 120px;
+    height: 120px; }
+  /*-- mediaque MAIN SERVICIOS --*/
+  .nuestros-servicios section .carru {
+    display: none; }
+  .galeria div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 15px; } }
+
+@media screen and (max-width: 530px) {
+  .logo-wsp-fixed {
+    display: none; }
+  footer iframe {
+    display: none; }
+  .direccion-footer {
+    font-size: 12px; } }
+
+@media screen and (max-width: 440px) {
+  /*-- mediaque MAIN CONTACTENOS --*/
+  .contacto .formulario-de-contacto div {
+    width: 300px;
+    height: auto; }
+    .contacto .formulario-de-contacto div textarea {
+      width: 250px;
+      height: 125px; }
+  .contacto .formulario-de-contacto section {
+    display: none; } }
+
+@media screen and (max-width: 400px) {
+  .contenedores p {
+    display: none; }
+  .contenedores {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .barra-arriba {
+    font-size: 10px; }
+  header a img {
+    width: 120px;
+    height: 80%; }
+  .redes-footer {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: end; }
+  .redes-footer a img {
+    padding: 5px;
+    width: 40px;
+    height: 80%;
+    transition: 0,5s;
+    object-fit: cover; } }
