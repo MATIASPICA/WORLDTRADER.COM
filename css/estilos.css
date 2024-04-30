@@ -138,15 +138,14 @@ header {
 main {
   background-color: #c7caca;
   display: flex;
-  flex-direction: column;
-  /*--- SERVICIOS CARRUSEL -----*/ }
+  flex-direction: column; }
   main .info {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: 520px;
     grid-area: calc(100vh - 118px); }
     main .info .contenedores {
-      background-image: url(../images/contenedoresimagen.jpg);
+      background-image: url(../images/puertoherramientas.jpg);
       width: 100%;
       height: 100%;
       background-position: center;
@@ -238,10 +237,6 @@ main {
             color: black;
             transform: scale(1.2);
             border-radius: 5px; }
-  main .carrusel-de-servicios {
-    width: 100%;
-    height: 500px;
-    margin: 2px 0 2px 0; }
 
 /*--- MAIN DE QUIENES SOMOS -----*/
 .quienessomos .la-empresa {
@@ -411,6 +406,31 @@ main {
       width: 310px;
       height: 210px; }
 
+/*--- MAIN DE HERRAMIENTAS -----*/
+.herramientas {
+  background-image: url(../images/puertoherramientass.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 500px; }
+  .herramientas h3 {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    color: white; }
+
+.herramientastarjetas {
+  width: 80%;
+  height: auto;
+  margin: 10%; }
+  .herramientastarjetas div {
+    height: auto;
+    margin-bottom: 20px; }
+
 footer {
   display: flex;
   background: #3c4646;
@@ -484,6 +504,13 @@ footer {
     width: 350px;
     height: 200px; } }
 
+@media screen and (max-width: 900px) {
+  /*-- mediaque MAIN HERRAMIENTAS --*/
+  .herramientas {
+    width: auto; }
+    .herramientas h3 {
+      font-size: 70px; } }
+
 @media screen and (max-width: 840px) {
   main .info .contenedores h1 {
     font-size: 60px; }
@@ -539,7 +566,12 @@ footer {
     font-size: 15px; }
   .galeria div img {
     width: 250px;
-    height: 120px; } }
+    height: 120px; }
+  /*-- mediaque MAIN HERRAMIENTAS --*/
+  .herramientas {
+    width: auto; }
+    .herramientas h3 {
+      font-size: 50px; } }
 
 @media screen and (max-width: 670px) {
   /*-- mediaque MAIN QUIENES SOMOS --*/
@@ -597,7 +629,12 @@ footer {
   footer iframe {
     display: none; }
   .direccion-footer {
-    font-size: 12px; } }
+    font-size: 12px; }
+  /*-- mediaque MAIN HERRAMIENTAS --*/
+  .herramientas {
+    width: auto; }
+    .herramientas h3 {
+      font-size: 40px; } }
 
 @media screen and (max-width: 440px) {
   /*-- mediaque MAIN CONTACTENOS --*/
@@ -632,4 +669,9 @@ footer {
     width: 40px;
     height: 80%;
     transition: 0,5s;
-    object-fit: cover; } }
+    object-fit: cover; }
+  /*-- mediaque MAIN HERRAMIENTAS --*/
+  .herramientas {
+    width: auto; }
+    .herramientas h3 {
+      font-size: 30px; } }
